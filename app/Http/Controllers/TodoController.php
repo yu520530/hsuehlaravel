@@ -12,4 +12,9 @@ class TodoController extends Controller
         $data =  DB::table('todo')->get();
         return view('pages.index',compact('data'));
     }
+
+    public function create()
+    {
+        return view('pages.create');
+    }
 }
