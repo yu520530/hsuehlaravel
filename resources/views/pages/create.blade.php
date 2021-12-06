@@ -1,14 +1,14 @@
 @extends('layouts.todomaster')
 @section('content')
     <div class="container">
-        <form class="form-control">
+        <form class="form-control" action="{{route('store')}}">
             <div class="mb-3">
                 <label for="title">標題</label>
-                <input name="title"/>
+                <input name="title" required />
             </div>
             <div class="mb-3">
                 <label for="content">內容</label>
-                <input name="content"/>
+                <input name="content" required />
             </div>
 
             <div class="mb-3">
