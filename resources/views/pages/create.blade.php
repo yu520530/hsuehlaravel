@@ -7,8 +7,8 @@
                 <input name="title" required />
             </div>
             <div class="mb-3">
-                <label for="content">內容</label>
-                <input name="content" required />
+                <label for="todocontent">內容</label>
+                <input name="todocontent" required />
             </div>
 
             <div class="mb-3">

@@ -20,6 +20,12 @@ class TodoController extends Controller
 
     public function store(Request $request)
     {
-        dd($request);
+
+        DB::table('todo')->insert([
+            'title' =>$request->title,
+            'todocontent'=>$request->todocontent,
+            'remark'=>$request->remark,
+        ]);
+        return view('pages.create');
     }
 }

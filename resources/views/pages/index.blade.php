@@ -11,7 +11,7 @@
                 @foreach($data as $row)
                     <tr>
                         <td>{{$row->title}}</td>
-                        <td>{{$row->content}}</td>
+                        <td>{{$row->todocontent}}</td>
                         <td>{{$row->remark}}</td>
                     </tr>
                 @endforeach
