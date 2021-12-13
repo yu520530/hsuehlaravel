@@ -13,6 +13,8 @@
                         <td>{{$row->title}}</td>
                         <td>{{$row->todocontent}}</td>
                         <td>{{$row->remark}}</td>
+                        <td><button class="btn btn-outline-success" id="btn-patch">修改</button></td>
+                        <td><button type="button" class="btn btn-outline-danger" id="btn-delete{{$row->id}}" onclick="window.location.href='{{route('delete',$row->id)}}'">刪除</button></td>
                     </tr>
                 @endforeach
             </tbody>

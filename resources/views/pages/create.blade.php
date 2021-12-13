@@ -1,7 +1,8 @@
 @extends('layouts.todomaster')
 @section('content')
     <div class="container">
-        <form class="form-control" action="{{route('store')}}">
+        <form class="form-control" action="{{route('get_create_page')}}" method="post">
+            @csrf
             <div class="mb-3">
                 <label for="title">標題</label>
                 <input name="title" required />

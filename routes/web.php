@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\TodoController::class, 'index']);
-Route::get('/create', [\App\Http\Controllers\TodoController::class, 'create']);
-Route::get('/store', [\App\Http\Controllers\TodoController::class, 'store',])->name('store');
+Route::get('/', [\App\Http\Controllers\TodoController::class, 'index'])
+->name('get_post_page');
+
+Route::get('/create', [\App\Http\Controllers\TodoController::class, 'get_create_page'])
+    ->name('get_create_page');
+Route::post('/create', [\App\Http\Controllers\TodoController::class, 'post_create_store',])
+    ->name('post_create_store');
+Route::get('/delete/{id}', [\App\Http\Controllers\TodoController::class, 'delete',])
+    ->name('delete');

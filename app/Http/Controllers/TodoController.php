@@ -13,12 +13,12 @@ class TodoController extends Controller
         return view('pages.index',compact('data'));
     }
 
-    public function create()
+    public function get_create_page()
     {
         return view('pages.create');
     }
 
-    public function store(Request $request)
+    public function post_create_store(Request $request)
     {
 
         DB::table('todo')->insert([
@@ -27,5 +27,14 @@ class TodoController extends Controller
             'remark'=>$request->remark,
         ]);
         return view('pages.create');
+    }
+
+    public function delete($id)
+    {
+
+        DB::table('todo')
+            ->where('id', $id)
+            ->delete();
+        return redirect()->route('get_post_page');
     }
 }
