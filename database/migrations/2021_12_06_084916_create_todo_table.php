@@ -16,7 +16,7 @@ class CreateTodoTable extends Migration
         Schema::create('todo', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('content');
+            $table->text('todocontent');
             $table->string('remark')->nullable();
             $table->timestamps();
         });
